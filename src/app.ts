@@ -135,6 +135,13 @@ function populateServiceConfigFromEnv(config: ServiceConfig, env: NodeJS.Process
     config.rendering.dumpio = env['RENDERING_DUMPIO'] === 'true';
   }
 
+  if (env['SELENIUM_URL']) {
+    config.rendering.selenium = {
+      ...(config.rendering.selenium || {}),
+      url: env['SELENIUM_URL'] as string,
+    };
+  }
+
   if (env['RENDERING_ARGS']) {
     const args = env['RENDERING_ARGS'] as string;
     if (args.length > 0) {

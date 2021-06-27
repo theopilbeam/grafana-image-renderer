@@ -32,6 +32,7 @@
     "prom-client": "^11.5.3",
     "puppeteer": "^3.3.0",
     "puppeteer-cluster": "^0.22.0",
+    "selenium-webdriver": "^4.0.0-beta.4",
     "unique-filename": "^1.1.0",
     "winston": "^3.2.1"
   },

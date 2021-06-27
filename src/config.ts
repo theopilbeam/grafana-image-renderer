@@ -4,6 +4,9 @@ export interface ClusteringConfig {
   mode: string;
   maxConcurrency: number;
 }
+export interface SeleniumConfig {
+  url: string;
+}
 
 export interface RenderingConfig {
   chromeBin?: string;
@@ -19,6 +22,7 @@ export interface RenderingConfig {
   maxDeviceScaleFactor: number;
   mode: string;
   clustering: ClusteringConfig;
+  selenium?: SeleniumConfig;
   verboseLogging: boolean;
   dumpio: boolean;
 }
@@ -77,6 +81,7 @@ const defaultRenderingConfig: RenderingConfig = {
     mode: 'browser',
     maxConcurrency: 5,
   },
+  selenium: undefined,
   verboseLogging: false,
   dumpio: false,
 };
