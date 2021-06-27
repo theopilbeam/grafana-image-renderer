@@ -15,9 +15,11 @@ RUN \
 
 FROM base as build
 
-COPY . ./
 
+COPY package.json yarn.lock ./
 RUN yarn install --pure-lockfile
+
+COPY . ./
 RUN yarn run build
 
 EXPOSE 8081
